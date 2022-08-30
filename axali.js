@@ -1,3 +1,6 @@
+// let test = "test"
+// console.log(test);
+
 
 
 //Task 1
@@ -15,22 +18,23 @@
 */
 
 function logArr(arr) {
-    for (let i = 0 ; i < arr.lenght ; i ++)
-    console.log(arr[i]);
-}
-
-function chakIteration (obj) {
-    if (obj.isitarable) {
-        logArr(obj.sampleArray)
-    } else {
-        console.log("provided array isn't itarable")
+    for (let i = 0; i < arr.length; i ++) {
+        console.log(arr[i]);
     }
 }
 
-let sampleObject = {
-    isItarable : false,
-    sampleArray : [12,63,21,34,98,57]
+function chakIteration(obj) {
+    if (obj.isItarable) {
+        logArr(obj.sampleArray);
+    } else {
+        console.log("provided array isn't itarable");
+    }
 }
+
+const sampleObject = {
+    isItarable : true,
+    sampleArray : [12,63,21,34,98,57],
+};
 chakIteration(sampleObject);
 //Task 2
 /*
@@ -42,6 +46,13 @@ chakIteration(sampleObject);
     
 */
 
+function checkPythagoras (x,y,z) {
+    return ( x * x == y * y + z * z || y * y == x * x + z * z || z * z == y * y + x * x);
+}
+
+let test = checkPythagoras(8,6,10);
+console.log(test);
+
 //Task 3
 /*
     დაწერეთ ფუნქცია minMax რომელიც იღებს 1 მასივის ტიპის პარამეტრს 
@@ -49,6 +60,25 @@ chakIteration(sampleObject);
     მაგ : [2,14,25,75,11,6] თუ კი ამ მასივს გადავცემთ არგუმენტის სახით ფუნქციამ უნდა
     დააბრუნოს "Min value is 2 and Max value is 75"
 */
+
+let arr = [2,14,25,75,11,6];
+
+function minMax(testArray) {
+    let minVal = testArray[0];
+    let maxVal = testArray[0];
+    for(let i = 0; i < testArray.length; i ++) {
+        if (testArray[i] <= minVal) {
+            minVal = testArray[i];
+        }
+        if (testArray[i] > maxVal) {
+            maxVal = testArray[i];
+        }
+    }
+    console.log(maxVal,minVal);
+    
+}
+minMax(arr);
+
 
 //Task 4
 
@@ -68,6 +98,21 @@ Straight angle: A 180 degree angle.
 // }
 
 // checkDeg(92)
+
+function chackAngle (deg) {
+    if( deg > 0 && deg < 90) {
+        return "Acute angle";
+    }
+    if(deg == 90) {
+        return "Right angle"
+    }
+    if(deg > 90 && deg < 180) {
+       return "Obtuse angle" 
+    }
+    if(deg == 180) {
+        return "Straight angle"
+    }
+}
 
 //Task 5
 /*
