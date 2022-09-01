@@ -79,6 +79,7 @@ function minMax(testArray) {
 }
 minMax(arr);
 
+//hhh
 
 //Task 4
 
